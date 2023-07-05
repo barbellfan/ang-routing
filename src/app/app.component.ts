@@ -15,6 +15,8 @@ export class AppComponent implements OnInit {
 
     const obsTest$ = new Observable(observer => {
       observer.next("return from observable");
+      observer.next("return 2 from observable");
+      observer.next("return 3 from observable");
     }).subscribe(value => {
       console.log(value);
 
