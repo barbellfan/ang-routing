@@ -26,6 +26,8 @@ export class AppComponent implements OnInit {
       console.log(value);
     });
 
+    obsTest$.unsubscribe();
+
     const obsTest = function() {
       return "return from function";
     }
