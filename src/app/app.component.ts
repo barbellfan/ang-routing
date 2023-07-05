@@ -14,14 +14,18 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
 
     const obsTest$ = new Observable(observer => {
-      console.log("printed from observable");
-    }).subscribe();
+      observer.next("return from observable");
+    }).subscribe(value => {
+      console.log(value);
+
+    });
 
     const obsTest = function() {
-      console.log("printed from function");
-
+      return "return from function";
     }
 
-    obsTest();
+    const returnData = obsTest();
+    console.log(returnData);
+
   }
 }
