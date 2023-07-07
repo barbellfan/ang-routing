@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -9,7 +10,7 @@ import { Observable } from 'rxjs';
 export class AppComponent implements OnInit {
   title = 'ang-routing';
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
 
@@ -35,5 +36,11 @@ export class AppComponent implements OnInit {
     const returnData = obsTest();
     console.log(returnData);
 
+  }
+
+  onSubmit() {
+    //this.router.navigate(['/posts']);
+    //this.router.navigate(['/post', 1, 'postTitle']);
+    this.router.navigate(['/posts'], { queryParams: { page: 1, orderBy: 'newest'}});
   }
 }
