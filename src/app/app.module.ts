@@ -6,13 +6,15 @@ import { PostListComponent } from './post-list/post-list.component';
 import { HomeComponent } from './home/home.component';
 import { SinglePostComponent } from './single-post/single-post.component';
 import { AppRoutingModule } from './app-routing.module';
+import { FourzerofourComponent } from './fourzerofour/fourzerofour.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PostListComponent,
     HomeComponent,
-    SinglePostComponent
+    SinglePostComponent,
+    FourzerofourComponent
   ],
   imports: [
     BrowserModule,
